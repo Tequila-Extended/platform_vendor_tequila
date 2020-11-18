@@ -162,6 +162,11 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     product_charger_res_images
+=======
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    NexusLauncherRelease
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
@@ -215,4 +220,5 @@ $(call inherit-product, vendor/tequila/config/version.mk)
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
 # Bootanimation
- include vendor/tequila/config/bootanimation.mk
+ include vendor/tequila/config/bootanimation.mk# RRO Overlays
+$(call inherit-product, vendor/aosp/config/rro_overlays.mk)
