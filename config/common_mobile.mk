@@ -1,16 +1,10 @@
 # Inherit common mobile tequila stuff
 $(call inherit-product, vendor/tequila/config/common.mk)
 
+
 # Aperture
 PRODUCT_PACKAGES += \
     Aperture
-
-# Launcher3
-PRODUCT_PACKAGES += \
-    Launcher3QuickStep
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Launcher3QuickStep
 
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

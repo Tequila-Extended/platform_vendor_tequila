@@ -40,6 +40,8 @@ endif
 # Disable lockscreen live wallpaper for media metadata on lockscreen to work
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.wm.debug.lockscreen_live_wallpaper=false
+# Audio
+$(call inherit-product, vendor/tequila/audio/audio.mk)
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -216,6 +218,7 @@ PRODUCT_PACKAGES += \
     Updater
 endif
 
+<<<<<<< HEAD
 $(call inherit-product, vendor/tequila/config/version.mk)
 
 # Inherit from GMS product config
@@ -229,3 +232,10 @@ endif
 
 # RRO Overlays
 $(call inherit-product, vendor/tequila/config/rro_overlays.mk)
+=======
+include vendor/infinity/config/version.mk
+
+# Sounds (default)
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.config.ringtone=vibe.ogg
+>>>>>>> 96de0f1e (vendor: Add our ringtone and set as default)
