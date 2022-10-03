@@ -218,7 +218,6 @@ PRODUCT_PACKAGES += \
     Updater
 endif
 
-<<<<<<< HEAD
 $(call inherit-product, vendor/tequila/config/version.mk)
 
 # Inherit from GMS product config
@@ -232,10 +231,8 @@ endif
 
 # RRO Overlays
 $(call inherit-product, vendor/tequila/config/rro_overlays.mk)
-=======
-include vendor/infinity/config/version.mk
 
 # Sounds (default)
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.config.ringtone=vibe.ogg
->>>>>>> 96de0f1e (vendor: Add our ringtone and set as default)
+    ro.config.ringtone=vibe.ogg \
+    ro.config.notification_sound=Ping.ogg
