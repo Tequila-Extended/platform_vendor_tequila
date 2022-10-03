@@ -236,3 +236,4 @@ $(call inherit-product, vendor/tequila/config/rro_overlays.mk)
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.ringtone=vibe.ogg \
     ro.config.notification_sound=Ping.ogg
+    ro.config.alarm_alert=MorningAlarm.ogg
