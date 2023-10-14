@@ -162,7 +162,7 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     product_charger_res_images
-=======
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
@@ -218,6 +218,15 @@ endif
 
 $(call inherit-product, vendor/tequila/config/version.mk)
 $(call inherit-product, vendor/google/gms/gms_full.mk)
+
+# Inherit from GMS product config
+ifeq ($(TARGET_USES_MINI_GAPPS),true)
+$(call inherit-product, vendor/gms/gms_mini.mk)
+else ifeq ($(TARGET_USES_PICO_GAPPS),true)
+$(call inherit-product, vendor/gms/gms_pico.mk)
+else
+$(call inherit-product, vendor/gms/gms_full.mk)
+endif
 
 # RRO Overlays
 $(call inherit-product, vendor/aosp/config/rro_overlays.mk)
