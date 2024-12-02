@@ -8,9 +8,9 @@ ifeq ($(TEQUILA_BUILDTYPE), OFFICIAL)
 OFFICIAL_DEVICES = $(shell cat vendor/lineage/tequila.devices)
   FOUND_DEVICE =  $(filter $(OFFICIAL_DEVICES))
     ifeq ($(FOUND_DEVICE))
-      MATRIXX_BUILD_TYPE := OFFICIAL
+      TEQUILA_BUILDTYPE := OFFICIAL
     else
-      MATRIXX_BUILD_TYPE := UNOFFICIAL
+      TEQUILA_BUILDTYPE := UNOFFICIAL
     endif
 endif
 

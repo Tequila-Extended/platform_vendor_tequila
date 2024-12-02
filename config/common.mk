@@ -217,16 +217,15 @@ PRODUCT_PACKAGES += \
 endif
 
 $(call inherit-product, vendor/tequila/config/version.mk)
-$(call inherit-product, vendor/google/gms/gms_full.mk)
 
 # Inherit from GMS product config
 ifeq ($(TARGET_USES_MINI_GAPPS),true)
-$(call inherit-product, vendor/gms/gms_mini.mk)
+$(call inherit-product, vendor/google/gms/gms_mini.mk)
 else ifeq ($(TARGET_USES_PICO_GAPPS),true)
-$(call inherit-product, vendor/gms/gms_pico.mk)
+$(call inherit-product, vendor/google/gms/gms_pico.mk)
 else
-$(call inherit-product, vendor/gms/gms_full.mk)
+$(call inherit-product, vendor/google/gms/gms_full.mk)
 endif
 
 # RRO Overlays
-$(call inherit-product, vendor/aosp/config/rro_overlays.mk)
+$(call inherit-product, vendor/tequila/config/rro_overlays.mk)
