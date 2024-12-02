@@ -5,7 +5,7 @@ TEQUILA_BUILD_DATE := $(shell date -u +%Y%m%d)
 TEQUILA_BUILDTYPE ?= UNOFFICIAL
 
 ifeq ($(TEQUILA_BUILDTYPE), OFFICIAL)
-OFFICIAL_DEVICES = $(shell cat vendor/lineage/tequila.devices)
+OFFICIAL_DEVICES = $(shell cat vendor/tequila/tequila.devices)
   FOUND_DEVICE =  $(filter $(OFFICIAL_DEVICES))
     ifeq ($(FOUND_DEVICE))
       TEQUILA_BUILDTYPE := OFFICIAL
