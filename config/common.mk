@@ -212,6 +212,5 @@ PRODUCT_PACKAGES += \
 endif
 
 $(call inherit-product, vendor/tequila/config/version.mk)
-$(call inherit-product, vendor/google/gms/config.mk)
-$(call inherit-product, vendor/google/pixel/config.mk)
+$(call inherit-product, vendor/google/gms/gms_full.mk)
 
