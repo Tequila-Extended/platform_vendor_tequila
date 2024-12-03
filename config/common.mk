@@ -237,3 +237,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.ringtone=vibe.ogg \
     ro.config.notification_sound=Ping.ogg
     ro.config.alarm_alert=MorningAlarm.ogg
+
+# Display
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    debug.sf.frame_rate_multiple_threshold=60 \
+    ro.surface_flinger.enable_frame_rate_override=false
