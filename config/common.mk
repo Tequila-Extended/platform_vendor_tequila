@@ -221,12 +221,12 @@ endif
 $(call inherit-product, vendor/tequila/config/version.mk)
 
 # Inherit from GMS product config
-ifeq ($(TARGET_USES_MINI_GAPPS),true)
-$(call inherit-product, vendor/gms/gms_mini.mk)
+ifeq ($(TARGET_USES_FULL_GAPPS),true)
+$(call inherit-product, vendor/gms/gms_full.mk)
 else ifeq ($(TARGET_USES_PICO_GAPPS),true)
 $(call inherit-product, vendor/gms/gms_pico.mk)
 else
-$(call inherit-product, vendor/gms/gms_full.mk)
+$(call inherit-product, vendor/gms/gms_mini.mk)
 endif
 
 # RRO Overlays
@@ -235,7 +235,7 @@ $(call inherit-product, vendor/tequila/config/rro_overlays.mk)
 # Sounds (default)
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.ringtone=vibe.ogg \
-    ro.config.notification_sound=Ping.ogg
+    ro.config.notification_sound=Pikachu.ogg
     ro.config.alarm_alert=MorningAlarm.ogg
 
 # Display
