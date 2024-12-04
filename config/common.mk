@@ -219,6 +219,7 @@ PRODUCT_PACKAGES += \
 endif
 
 $(call inherit-product, vendor/tequila/config/version.mk)
+$(call inherit-product, vendor/google/pixel/config.mk)
 
 # Inherit from GMS product config
 ifeq ($(TARGET_USES_FULL_GAPPS),true)
