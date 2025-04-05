@@ -214,3 +214,5 @@ endif
 $(call inherit-product, vendor/tequila/config/version.mk)
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
+# Bootanimation
+ include vendor/aosp/config/bootanimation.mk
