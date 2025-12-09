@@ -9,8 +9,9 @@ PRODUCT_BRAND ?= tequilaOS
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # Bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/tequila/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+$(call inherit-product, vendor/tequila/config/bootanimation.mk)
+
+$(call inherit-product-if-exists, vendor/lineage/config/tequila.mk)
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -162,7 +163,7 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     product_charger_res_images
-=======
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
